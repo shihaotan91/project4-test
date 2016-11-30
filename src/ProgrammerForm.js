@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/ProgrammerForm.css';
 
+import ProgrammerResume from './ProgrammerResume'
+
 class ProgrammerForm extends React.Component {
   constructor() {
     super()
@@ -70,11 +72,13 @@ class ProgrammerForm extends React.Component {
         onChange={this.handleResumeInput} value={this.state.resumeInputJob2}
         type="text" placeholder="Your Second Job"/>
 
-        <h1>{this.state.resumeInputName}</h1>
-
-
         <button type="submit">Submit Resume</button>
         </form>
+
+        <ProgrammerResume
+        name={this.state.resumeInputName}
+        job1={this.state.resumeInputJob1}
+        job2={this.state.resumeInputJob2}/>
       </div>
     )
   }

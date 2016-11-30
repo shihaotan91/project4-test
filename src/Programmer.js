@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ProgrammerForm from './ProgrammerForm'
-import ProgrammerResume from './ProgrammerResume'
 
 class Programmer extends React.Component {
   constructor() {
@@ -33,10 +32,6 @@ class Programmer extends React.Component {
       <div>
       <ProgrammerForm
       addResume={this.addResume} updateResume={this.updateResume} resumes={this.state.resumes}/>
-
-      <ProgrammerResume
-      resumes={this.state.resumes}
-      random={this.state.random}/>
       </div>
     )
   }
